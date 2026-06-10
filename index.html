@@ -728,6 +728,58 @@ section:last-child { border-bottom: none; }
   text-transform: uppercase;
 }
 
+/* ── PHOTO HERO ── */
+.photo-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--line);
+  border-bottom: 0.5px solid var(--line);
+}
+.photo-hero figure { position: relative; margin: 0; overflow: hidden; }
+.photo-hero img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+.photo-hero figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-family: 'DM Mono', 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background: rgba(17,17,16,0.55);
+  padding: 5px 10px;
+}
+
+/* ── BRAND GALLERY ── */
+.brand-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--line);
+  border: 0.5px solid var(--line);
+  margin-top: 2rem;
+}
+.brand-gallery figure { background: var(--white); margin: 0; }
+.brand-gallery img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+.brand-gallery figcaption {
+  font-family: 'DM Mono', 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  padding: 0.6rem 0.75rem;
+  line-height: 1.4;
+}
+
 /* ── FADE IN ── */
 .fade-in {
   opacity: 0;
@@ -754,6 +806,9 @@ section:last-child { border-bottom: none; }
   .founder-block { grid-template-columns: 1fr; gap: 1.5rem; }
   .contact-grid { grid-template-columns: 1fr; }
   .cover-brand-line { font-size: 38px; }
+  .photo-hero { grid-template-columns: 1fr; }
+  .photo-hero img { height: 240px; }
+  .brand-gallery { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
@@ -786,6 +841,18 @@ section:last-child { border-bottom: none; }
       <span class="badge">편의점 PB 협업</span>
     </div>
   </div>
+</div>
+
+<!-- PHOTO HERO -->
+<div class="photo-hero">
+  <figure>
+    <img src="photos/spread-boxes.jpg" alt="치키차카초코 시그니처 제품 라인업 — 코르네파이, 깨찰빵, 패키지">
+    <figcaption>SIGNATURE LINEUP</figcaption>
+  </figure>
+  <figure>
+    <img src="photos/parfait-table.jpg" alt="치키차카초코 디저트와 음료 — 파르페, 깨찰빵, 코르네파이">
+    <figcaption>DESSERT &amp; DRINK</figcaption>
+  </figure>
 </div>
 
 <div class="page">
@@ -920,6 +987,20 @@ section:last-child { border-bottom: none; }
           </div>
         </div>
       </div>
+    </div>
+    <div class="brand-gallery">
+      <figure>
+        <img src="photos/sesame-basket.jpg" alt="찰깨찰깨 깨찰빵 — 크림 가득 찬 단면">
+        <figcaption>찰깨찰깨 · 크림 가득 깨찰빵</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/bag-parfait.jpg" alt="치키차카초코 패키지와 초콜릿 드링크·파르페">
+        <figcaption>패키지 · 초콜릿 드링크 디저트</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/cups-cheers.jpg" alt="치키차카초코 본점 — 음료와 코르네파이 테이크아웃">
+        <figcaption>본점 · 음료 &amp; 코르네파이</figcaption>
+      </figure>
     </div>
   </div>
 </section>
