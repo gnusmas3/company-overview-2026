@@ -790,6 +790,42 @@ section:last-child { border-bottom: none; }
   line-height: 1.4;
 }
 
+/* ── IP & SEASONAL SHOWCASE ── */
+.ip-showcase { margin-top: 2.5rem; }
+.ip-label {
+  font-family: 'DM Mono', 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 0.5px solid var(--line);
+}
+.ip-character {
+  margin: 0;
+  border: 0.5px solid var(--line);
+  background: var(--white);
+  padding: 1.5rem 2rem;
+}
+.ip-character img { width: 100%; height: auto; display: block; }
+.season-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--line);
+  border: 0.5px solid var(--line);
+  margin-top: 2px;
+}
+.season-grid figure { background: var(--white); margin: 0; }
+.season-grid img { width: 100%; height: auto; display: block; }
+.season-grid figcaption {
+  font-family: 'DM Mono', 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding: 0.55rem 0.7rem;
+}
+
 /* ── FADE IN ── */
 .fade-in {
   opacity: 0;
@@ -819,6 +855,8 @@ section:last-child { border-bottom: none; }
   .photo-hero { grid-template-columns: 1fr; }
   .photo-hero img { height: 240px; }
   .brand-gallery { grid-template-columns: 1fr 1fr; }
+  .season-grid { grid-template-columns: 1fr 1fr; }
+  .ip-character { padding: 1rem 1.25rem; }
 }
 </style>
 </head>
@@ -1011,6 +1049,32 @@ section:last-child { border-bottom: none; }
         <img src="photos/cups-cheers.jpg" alt="치키차카초코 본점 — 음료와 코르네파이 테이크아웃">
         <figcaption>본점 · 음료 &amp; 코르네파이</figcaption>
       </figure>
+    </div>
+
+    <!-- IP & SEASONAL DESIGN -->
+    <div class="ip-showcase">
+      <div class="ip-label mono-font">캐릭터 IP · 시즌 일러스트 마케팅</div>
+      <figure class="ip-character">
+        <img src="photos/ip-characters.jpg" alt="치키차카초코 동키(당나귀) 캐릭터 — 초콜릿 드링크·초콜릿·코르네파이">
+      </figure>
+      <div class="season-grid">
+        <figure>
+          <img src="photos/cup-spring.jpg" alt="치키차카초코 봄 시즌컵 — Cherry Blossom">
+          <figcaption>SPRING · 벚꽃</figcaption>
+        </figure>
+        <figure>
+          <img src="photos/cup-summer.jpg" alt="치키차카초코 여름 시즌컵 — Cool Summer">
+          <figcaption>SUMMER · 서머</figcaption>
+        </figure>
+        <figure>
+          <img src="photos/cup-autumn.jpg" alt="치키차카초코 가을 시즌컵 — Fall is Coming">
+          <figcaption>AUTUMN · 가을</figcaption>
+        </figure>
+        <figure>
+          <img src="photos/cup-winter.jpg" alt="치키차카초코 겨울 시즌컵 — Stay Warm">
+          <figcaption>WINTER · 겨울</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
